@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hash Cracker</title>
+    <link rel="stylesheet" href="style.css">
+    
+
+
+    <style>
+        body {
+            background-image: url('https://tse2.mm.bing.net/th/id/OIP.NjMaCEwrOE3k1sUd5VXItAHaE8?rs=1&pid=ImgDetMain');
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #c7c6c6;
+            padding: 20px;
+
+}
+h1{
+    font-style: italic;
+    font-size: xx-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 1px;
+}
+
+h2{
+    font-style: italic;
+    font-size: small;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 1px;
+    margin-bottom: 20px;
+    color: #0d3cf5d5;
+
+}
+
+.container {
+
+    background: white;
+    border: 8px solid white;
+    padding: 20px;
+    height: 70%;
+    max-height:750px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    max-width: 450px;
+    margin: auto;
+    background-color: rgb(187, 213, 236);
+
+
+}
+
+
+#minl{
+    width: 80px;
+    display: inline;
+    margin-left: 10px;
+    margin-right: 10px;
+} 
+
+#maxl{
+    width: 80px;
+    display: inline;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+}
+
+.label{
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+
+
+input, select, button {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+#but {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#but:hover {
+    background-color: #220aff;
+}
+#cc{
+    font-size: small;
+
+}
+
+#button-container{
+    display: flex;
+    width: 100;
+    flex-direction:row ;
+    
+    
+    }
+
+    button{
+        color: #000000;
+        background-color: #ffffff;
+        width:200px;
+        justify-content: baseline;
+
+        font-size: medium;
+        font-style: normal;
+        font-family: 'Times New Roman', Times, serif;
+
+
+    }
+    button:hover {
+    background-color: #00ff4d;
+    text-shadow: #ffffff;
+}
+    </style>
+</head>
+
+</style>
+
+<body>
+
+    <div id="button-container" >
+       
+    <a href="https://www.google.com" >
+        <button >HOME</button>
+        </a>
+         <a href="https://www.google.com" >
+        <button >IDENTIFIER</button>
+        </a>
+         <a href="https://www.google.com" >
+        <button >GENERATOR</button>
+        </a>
+         <a href="https://www.google.com" >
+        <button >CRACKER</button>
+        </a>
+      
+    </div>
+
+
+    <!-- <div id="button-container">
+    <a href="home.html"><button>HOME</button></a>
+    <a href="generator.html"><button>HASH GENERATOR</button></a>
+    <a href="index.html"><button>HASH CRACKER</button></a>
+    <a href="identifier.html"><button>HASH IDENTIFIER</button></a>
+</div> -->
+
+
+        <div class="container">
+        <h1>NoHashZone</h1>
+        <h2>Enter A Zone Where Hashes Don’t Stay Hidden</h2>
+
+        <form method="POST" enctype="multipart/form-data">
+            <label id="enterhash" >Enter Hash:</label>
+            <br>
+        
+            <input type="text" name="hash" placeholder="Enter hash..." required /><br>
+
+            <label>Select Hash Type:</label>
+            <br>
+            <select name="hashType">
+                <option value="md5">MD5</option>
+                <option value="sha1">SHA-1</option>
+                <option value="sha224">SHA-224</option>
+                <option value="sha256">SHA-256</option>
+                <option value="sha384">SHA-384</option>
+                <option value="sha512">SHA-512</option>
+                <option value="sha3_224">SHA3-224</option>
+                <option value="sha3_256">SHA3-256</option>
+                <option value="sha3_384">SHA3-384</option>
+                <option value="sha3_512">SHA3-512</option>
+                <option value="blake2s">BLAKE2s</option>
+                <option value="md5-sha1">MD5-SHA1</option>
+                <option value="shake_256">SHAKE-256</option>
+                <option value="sha512_256">SHA-512/256</option>
+                <option value="blake2b">BLAKE2b</option>
+                <option value="sm3">SM3</option>
+                <option value="shake_128">SHAKE-128</option>
+                <option value="ripemd160">RIPEMD-160</option>
+                <option value="sha512_224">SHA-512/224</option>
+
+            </select>
+            <br>
+
+            <div class="label">
+                <label id="ml" for="min_length">Minimum length:</label>
+                <input id="minl" type="text" name="min_length" />
+    
+                <label id="male" for="max_length">Maximum length:</label>
+                <input id="maxl" type="text" name="max_length" />
+                <br>
+            </div>
+
+            <div class="chmax">
+                <label for="ch">Character (Number + alphabet + special symbol etc):</label><br>
+                <input type="text" name="ch" />
+                <br>
+
+                <label for="max_worker">Max Worker (threads):</label><br>
+                <input type="text" name="max_worker"  placeholder="Threads (In Integer)"/>
+                <br>
+            </div>
+
+            
+
+            <button id="but" type="submit">Crack Hash</button><br>
+            <br>
+            
+            <label for="result">String of Given hash:</label>
+            <p id="result">{{ result }}</p>
+
+            <p id="cc">© This Project is solely designed
+                 and developed by Tushar. All rights reserved.</p>
+
+
+        </form>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
