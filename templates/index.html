@@ -15,6 +15,10 @@
             text-align: center;
             background-color: #c7c6c6;
             padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
 
 }
 h1{
@@ -38,6 +42,7 @@ h2{
 
     background: white;
     border: 8px solid white;
+    
     padding: 20px;
     height: 70%;
     max-height:750px;
@@ -76,7 +81,7 @@ h2{
 
 
 
-input, select, button {
+input, select {
     display: block;
     width: 90%;
     margin: 10px auto;
@@ -97,7 +102,7 @@ input, select, button {
     font-size: small;
 
 }
-
+/* 
 #button-container{
     display: flex;
     width: 100;
@@ -121,7 +126,66 @@ input, select, button {
     button:hover {
     background-color: #00ff4d;
     text-shadow: #ffffff;
+} */
+
+
+
+        #button-container{
+    display: flex;
+    width: px;
+    flex-direction:row ;
+    position: fixed;
+
+    /* position: initial; */
+    top: 50px;
+    /* leftpx; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white; /* Ya koi transparent bg */
+    z-index: 1000; /* Taaki sabke upar rahe */
+    padding: 5px 10px;
+/* background-color: red; */
+    }
+
+    button{
+        color: #000000;
+        background-color: #ffffff;
+        width:15vw;
+
+        font-size: medium;
+        font-style: normal;
+        font-family: 'Times New Roman', Times, serif;
+
+
+    }
+    button:hover {
+    background-color: #00ff4d;
+    text-shadow: #ffffff;
 }
+
+
+button {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    width: 150px;
+    height: 40px;
+    padding-left: 150;
+    border-radius: 5px;
+    
+}
+button:hover {
+    background-color: #3cff00;
+}
+
+
+
+
+
+
+
     </style>
 </head>
 
@@ -129,7 +193,7 @@ input, select, button {
 
 <body>
 
-    <div id="button-container" >
+   <div id="button-container" >
        
     <a href="https://www.google.com" >
         <button >HOME</button>
@@ -146,6 +210,14 @@ input, select, button {
       
     </div>
 
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br><br>
+    <br><br>
+    
 
     <!-- <div id="button-container">
     <a href="home.html"><button>HOME</button></a>
