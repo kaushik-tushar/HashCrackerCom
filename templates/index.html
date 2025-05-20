@@ -1,127 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Hash Identifier</title>
-<style>
-  /* Reset and base styles */
-  * {
-    box-sizing: border-box;
-  }
-  body {
-    margin: 0;
-    background-image: url('https://tse2.mm.bing.net/th/id/OIP.NjMaCEwrOE3k1sUd5VXItAHaE8?rs=1&pid=ImgDetMain');
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hash Cracker</title>
+    <link rel="stylesheet" href="style.css">
     
-    display: flex;
-    ;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-  }
-  .container {
 
-    background: white;
-    border: 8px solid white;
-    padding: 20px;
-    height:630px;
-    /* max-height:500px; */
-    border-radius: 25px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    max-width: 450px;
-    margin: auto;
-    
-    background-color: rgb(187, 213, 236);
-    margin-top: 13%;
-  
-  }
-    
- h1{
+
+    <style>
+        body {
+            background-image: url('https://tse2.mm.bing.net/th/id/OIP.NjMaCEwrOE3k1sUd5VXItAHaE8?rs=1&pid=ImgDetMain');
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #c7c6c6;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+}
+h1{
     font-style: italic;
     font-size: xx-large;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-bottom: 1px;
-    justify-items: center;
-    justify-content: center;
-    padding-left: 100px;
-    color: #1c1c28;
-    
 }
-  p.subheading {
+
+h2{
     font-style: italic;
     font-size: small;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-top: 1px;
     margin-bottom: 20px;
-    color: #1c1c28;
-    padding-left: 50px;
-  }
-  input {
-    width: 100%;
-    border: none;
-    border-radius: 8px;
-    border: 1px solid;
-    padding: 15px 20px;
-    font-size: 1rem;
-    font-family:'Times New Roman', Times, serif;
-   
-    color: #e0e0e0;
-  
-    resize: vertical;
-    min-height: 60px;
+    color: #0d3cf5d5;
+
+}
+
+.container {
+
+    background: white;
+    border: 8px solid white;
     
+    padding: 20px;
+    height: 70%;
+    max-height:750px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    max-width: 450px;
+    margin: auto;
+    background-color: rgb(187, 213, 236);
+
+
+}
+
+
+#minl{
+    width: 80px;
+    display: inline;
+    margin-left: 10px;
+    margin-right: 10px;
+} 
+
+#maxl{
+    width: 80px;
+    display: inline;
+    margin-left: 10px;
+    margin-right: 10px;
     
-  }
- 
-  button {
+}
+
+.label{
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+
+
+input, select {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+#but {
     background-color: #28a745;
     color: white;
     border: none;
     cursor: pointer;
-    width: 150px;
-    height: 40px;
-    padding-left: 150;
-    border-radius: 5px;
-    
 }
-button:hover {
+
+#but:hover {
     background-color: #220aff;
 }
-  
-  .result {
-    margin-top: 30px;
-    padding: 15px 20px;
-    background-color: #ffffff;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    min-height: 60px;
-    color: #000000;
-    border: 1px solid;
-    word-break: break-word;
-  }
-  footer {
-    margin-top: 30px;
-  
-    color: #000000;
-    font-family: 'Times New Roman', Times, serif;
-  }
+#cc{
+    font-size: small;
 
-  #button-container{
+}
+/* 
+#button-container{
+    display: flex;
+    width: 100;
+    flex-direction:row ;
+    
+    
+    }
+
+    button{
+        color: #000000;
+        background-color: #ffffff;
+        width:200px;
+        justify-content: baseline;
+
+        font-size: medium;
+        font-style: normal;
+        font-family: 'Times New Roman', Times, serif;
+
+
+    }
+    button:hover {
+    background-color: #00ff4d;
+    text-shadow: #ffffff;
+} */
+
+
+
+        #button-container{
     display: flex;
     width: px;
     flex-direction:row ;
     position: fixed;
+
     /* position: initial; */
     top: 50px;
     /* leftpx; */
-  
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: white; /* Ya koi transparent bg */
     z-index: 1000; /* Taaki sabke upar rahe */
     padding: 5px 10px;
-    /* margin-top: 1%; */
-    
-
+/* background-color: red; */
     }
 
     button{
@@ -140,12 +164,36 @@ button:hover {
     text-shadow: #ffffff;
 }
 
-  
-</style>
+
+button {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    width: 150px;
+    height: 40px;
+    padding-left: 150;
+    border-radius: 5px;
+    
+}
+button:hover {
+    background-color: #3cff00;
+}
+
+
+
+
+
+
+
+    </style>
 </head>
+
+</style>
+
 <body>
 
-   <div id="button-container" >
+ <div id="button-container" >
        
     <a href="https://www.google.com" >
         <button >HOME</button>
@@ -162,107 +210,94 @@ button:hover {
       
     </div>
 
+
     <br>
     <br>
     <br>
-
-
-
-
-  <div class="container" role="main">
-    <h1>Hash Identifier</h1>
-    <p class="subheading">Enter a hash string to identify its potential type(s)</p>
+    <br>
+    <br><br>
+    <br><br>
     
-    <input id="hashInput" placeholder="Paste your hash here..." aria-label="Hash input"></>
-    <br>
-    <br>
-    <button id="identifyBtn">Identify Hash</button>
+
+    <!-- <div id="button-container">
+    <a href="home.html"><button>HOME</button></a>
+    <a href="generator.html"><button>HASH GENERATOR</button></a>
+    <a href="index.html"><button>HASH CRACKER</button></a>
+    <a href="identifier.html"><button>HASH IDENTIFIER</button></a>
+</div> -->
+
+
+        <div class="container">
+        <h1>NoHashZone</h1>
+        <h2>Enter A Zone Where Hashes Don’t Stay Hidden</h2>
+
+        <form method="POST" enctype="multipart/form-data">
+            <label id="enterhash" >Enter Hash:</label>
+            <br>
+        
+            <input type="text" name="hash" placeholder="Enter hash..." required /><br>
+
+            <label>Select Hash Type:</label>
+            <br>
+            <select name="hashType">
+                <option value="md5">MD5</option>
+                <option value="sha1">SHA-1</option>
+                <option value="sha224">SHA-224</option>
+                <option value="sha256">SHA-256</option>
+                <option value="sha384">SHA-384</option>
+                <option value="sha512">SHA-512</option>
+                <option value="sha3_224">SHA3-224</option>
+                <option value="sha3_256">SHA3-256</option>
+                <option value="sha3_384">SHA3-384</option>
+                <option value="sha3_512">SHA3-512</option>
+                <option value="blake2s">BLAKE2s</option>
+                <option value="md5-sha1">MD5-SHA1</option>
+                <option value="shake_256">SHAKE-256</option>
+                <option value="sha512_256">SHA-512/256</option>
+                <option value="blake2b">BLAKE2b</option>
+                <option value="sm3">SM3</option>
+                <option value="shake_128">SHAKE-128</option>
+                <option value="ripemd160">RIPEMD-160</option>
+                <option value="sha512_224">SHA-512/224</option>
+
+            </select>
+            <br>
+
+            <div class="label">
+                <label id="ml" for="min_length">Minimum length:</label>
+                <input id="minl" type="text" name="min_length" />
     
-    <div id="result" class="result" aria-live="polite"></div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <footer>
-      Supported: MD2, MD4, MD5, SHA (SHA-0, SHA-1, SHA2 series, SHA3 series), BLAKE, Whirlpool, Tiger, HAVAL, RIPEMD, GOST, Snefru, PANAMA, CRC, CityHash, FarmHash, MurmurHash, SpookyHash, Jenkins, FNV, SipHash, XXHash, various MACs, Argon2, Keccak, SM3, PBKDF2, and more.
-    </footer>
-  </div>
-  
-<script>
-  function identifyHash(hash) {
-    if(!hash) return "Please enter a hash string.";
+                <label id="male" for="max_length">Maximum length:</label>
+                <input id="maxl" type="text" name="max_length" />
+                <br>
+            </div>
 
-    hash = hash.trim().toLowerCase();
-    const hexRegex = /^[0-9a-f]+$/;
+            <div class="chmax">
+                <label for="ch">Character (Number + alphabet + special symbol etc):</label><br>
+                <input type="text" name="ch" />
+                <br>
 
-    if(!hexRegex.test(hash)) {
-      return "Invalid characters detected. Hash should be hexadecimal.";
-    }
+                <label for="max_worker">Max Worker (threads):</label><br>
+                <input type="text" name="max_worker"  placeholder="Threads (In Integer)"/>
+                <br>
+            </div>
 
-    const length = hash.length;
+            
 
-    switch(length) {
-      case 4: return "Possibly: CRC-16, Fletcher-16, Luhn, DEK Hash.";
-        case 8: return "Possibly: CRC-8, ELF Hash, DJB Hash, JS Hash, RS Hash, PJW Hash, BKDR Hash.";
-        case 16: return "Possibly: Adler-32, CRC-32, CityHash32, FNV-1 (32-bit), FNV-1a (32-bit), MurmurHash2, SuperFastHash, SpookyHash-32, Jenkins Hash.";
-        case 20: return "Possibly: CRC-40, DJB2 Hash, Fletcher-40.";
-        case 24: return "Possibly: CRC-24, PANAMA (truncated), SipHash.";
-        case 28: return "Possibly: CRC-56, CityHash64 (truncated).";
-        case 30: return "Possibly: CityHash64.";
-        case 32: return "Possibly: MD2, MD4, MD5, HAVAL-128, RIPEMD-128, FNV-1a (32-bit), CRC-128, Tiger192,3, SDBM Hash, MurmurHash3 (32-bit), T1ha (32-bit).";
-        case 33: return "Possibly: Snefru-128, AIX MD5, Lotus Notes/Domino.";
-        case 34: return "Possibly: MSSQL 2000, Oracle 7-10g, MySQL pre-4.1.";
-        case 35: return "Possibly: Base58Check Address (Bitcoin).";
-        case 36: return "Possibly: CISCO Type 7, NTLMv1 (truncated).";
-        case 37: return "Possibly: LM Hash, SAM Hash.";
-        case 40: return "Possibly: SHA-0, SHA-1, RIPEMD-160, HAVAL-160, Tiger, Whirlpool-0, Skein-160, MAC-160, MD5 (SHA1 mixed), Bitcoin RIPEMD.";
-        case 48: return "Possibly: SHAKE128 (192-bit), Skein-192, SIMD-192, Keccak-192.";
-        case 56: return "Possibly: SHA-224, SHA3-224, HAVAL-224, Keccak-224, RIPEMD-224, Skein-224, SIMD-224.";
-        case 60: return "Possibly: Snefru-192, HAVAL-192.";
-        case 64: return "Possibly: SHA-256, SHA3-256, Keccak-256, HAVAL-256, BLAKE2s, RIPEMD-256, FNV-1a (64-bit), SHAKE128 (256-bit), CryptoNight, Skein-256, MurmurHash3 (128-bit truncated), TTH, X11, X13, X14, X15, X16r, GOST R 34.11-94, MurmurHash3 (64-bit), CityHash64, XXH64, SipHash-2-4, BLAKE2xs, Keccak truncated, SHA-256 HMAC, Scrypt (short).";
-        case 72: return "Possibly: LDAP SSHA, PBKDF2 (short), LDAP SSHA256.";
-        case 80: return "Possibly: Tiger2, HAVAL-5-160, SHA3-320, Skein-320, XXH3-512 (truncated).";
-        case 88: return "Possibly: PBKDF2-HMAC-SHA256 (salted), Django PBKDF2, CryptoNightR, XXHash3-88.";
-        case 96: return "Possibly: SHA-384, SHA3-384, Keccak-384, Skein-384, BLAKE2bp, SHA-384 HMAC.";
-        case 100: return "Possibly: CryptoNote Payment ID.";
-        case 104: return "Possibly: GOST R 34.11-94 (long), GOST Checksum (base64).";
-        case 112: return "Possibly: PBKDF2 (HMAC-SHA1, long), SHA512/224, SHA512/256, Bitcoin WIF (Base58).";
-        case 120: return "Possibly: Streebog-384, Scrypt (salted), Groestlcoin (long), Django SHA384.";
-        case 124: return "Possibly: Scrypt (short salt + long pass).";
-        case 128: return "Possibly: SHA-512, SHA3-512, SHA-512/224, SHA-512/256, BLAKE2b, Whirlpool, Streebog, Keccak-512, SHAKE256 (512-bit), Skein-512, PBKDF2-SHA512, Argon2d, Argon2i, Argon2id, PBKDF2-HMAC-SHA512, Lyra2, BcryptSHA256, GOST R 34.11-2012, SHA-512 HMAC, MD5-Crypt, BCrypt-PBKDF, MySQL5 hash, XXHash128, XXH3-128, X17, MeowHash (128-bit), HighwayHash-128.";
-        case 130: return "Possibly: Bitcoin WIF Private Key.";
-        case 132: return "Possibly: Ethereum Address (0x + 64 hex), Keccak256 with prefix.";
-        case 136: return "Possibly: SHAKE128-512, SHAKE256 (truncated), Skein-512 (truncated), SHA3 KMAC.";
-        case 144: return "Possibly: SHA3-576, Keccak-576.";
-        case 160: return "Possibly: SHAKE256 (640-bit), Skein-1024 (truncated), Echo-512, Streebog-512.";
-        case 192: return "Possibly: SHAKE256 (768-bit), XXHash3-192, HighwayHash-192, KangarooTwelve.";
-        case 256: return "Possibly: SHAKE256 (1024-bit), Skein-1024, MeowHash (256-bit), HighwayHash-256, Echo-256, SHAvite-3-256, BMW-256, Luffa-256, MD6 (256), JH (256-bit), CubeHash, Fugue, LaneHash, Hamsi, Grøstl, EchoHash, Blue Midnight Wish, MarsupilamiFourteen, SeaHash, MetroHash128, T1ha2, ZHash, QuarkHash, QubitHash, NeoScrypt, Myriad-Groestl, PHOTON, BASTION, CryptoNight Heavy, X21, X22i, X25X.";
+            <button id="but" type="submit">Crack Hash</button><br>
+            <br>
+            
+            <label for="result">String of Given hash:</label>
+            <p id="result">{{ result }}</p>
 
-      default:
-        if(length >= 7 && length <= 16) {
-          return "Hash length uncommon or truncated. Possibly CRC or Adler-32, CRC-16 variants.";
-        } else if(length === 224) {
-          return "Possible types: SHA3-224, Keccak-224";
-        } else {
-          return "Unknown or unsupported hash length: " + length;
-        }
-    }
-  }
+            <p id="cc">© This Project is solely designed
+                 and developed by Tushar. All rights reserved.</p>
 
-  document.getElementById('identifyBtn').addEventListener('click', () => {
-    const hashInput = document.getElementById('hashInput').value;
-    const result = identifyHash(hashInput);
-    document.getElementById('result').textContent = result;
-  });
 
-  // Allow Ctrl+Enter or Cmd+Enter to trigger identification while in textarea
-  document.getElementById('hashInput').addEventListener('keydown', (e) => {
-    if(e.key === 'Enter' && (e.ctrlKey || e.metaKey)) {
-      e.preventDefault();
-      document.getElementById('identifyBtn').click();
-    }
-  });
-</script>
+        </form>
+    </div>
+</div>
+
+    <script src="script.js"></script>
 </body>
 </html>
-
